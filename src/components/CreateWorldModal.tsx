@@ -73,7 +73,7 @@ export default function CreateWorldModal({ isOpen, onClose, onSubmit }: CreateWo
                   min="3" 
                   max="10"
                   className="w-full bg-black/30 border border-white/10 rounded-lg p-3 text-white focus:border-accent focus:outline-none"
-                  value={formData.max_players}
+                  value={isNaN(formData.max_players) ? '' : formData.max_players}
                   onChange={e => setFormData({...formData, max_players: parseInt(e.target.value)})}
                 />
               </div>
